@@ -4,19 +4,4 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-
-div {
-  border: 2px solid black;
-  vertical-align: center;
-  margin: auto;
-  padding: 25px;
-  width: 40vw;
-  height: 40vh;
-}
-
-div p {
-  height: 25%;
-  width: 80%;
-  border: 2px solid black;
-}
 /*# sourceMappingURL=main.css.map */

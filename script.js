@@ -1,8 +1,8 @@
 const morseCode = [
-    {a: '._'},
-    {b: '_...'},
-    {c: '_._.'},
-    {d: '_..'},
+    {char: 'a , ._'},
+    {char: 'b , _...'},
+    {char: 'c , _._.'},
+    {char: 'd ,_..'},
     {e: '.'},
     {f: '.._.'},
     {g: '__.'},
@@ -37,13 +37,33 @@ const morseCode = [
     {9: '____.'}
 ];
 
-const displayText = () => {
 
-let inputText = document.getElementById("translate").value.split("");
-document.getElementById("log").innerHTML = inputText;
 
-};
+const displayText = () => document.getElementById("translate").value.split("");
 
-const compareTextToArray = (morseCode, input ) => {
+const compareTextToArray = (morseCode, displayText) => {
+
+    const displayTextLoop = displayText.map();
+    document.getElementById.innerHTML(compareLoop);
     
+
 }
+
+const morseLoop = (result) => { \
+    return morseCode.char.includes(result);
+}
+
+
+compareTextToArray(morseCode, displayText);
+
+
+
+// const getUserEmail = (people) => people.map(userEmail);
+
+// const userEmail = (person) =>  person.email;
+
+// console.log(getUserEmail(people));
+
+
+
+    
