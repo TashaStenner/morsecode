@@ -1,60 +1,77 @@
-const morseCode = [
-    {char: 'a , ._'},
-    {char: 'b , _...'},
-    {char: 'c , _._.'},
-    {char: 'd ,_..'},
-    {e: '.'},
-    {f: '.._.'},
-    {g: '__.'},
-    {h: '....'},
-    {i: '..'},
-    {j: '.___'},
-    {k: '_._'},
-    {l: '._..'},
-    {m: '__'},
-    {n: '_.'},
-    {o: '___'},
-    {p: '.__.'},
-    {q: '__._'},
-    {r: '._.'},
-    {s: '...'},
-    {t: '_'},
-    {u: '.._'},
-    {v: '..._'},
-    {w: '.__'},
-    {x: '_.._'},
-    {y: '_.__'},
-    {z: '__..'},
-    {0: '_____'},
-    {1: '.____'},
-    {2: '..___'},
-    {3: '...__'},
-    {4: '...._'},
-    {5: '.....'},
-    {6: '_....'},
-    {7: '__...'},
-    {8: '___..'},
-    {9: '____.'}
-];
 
 
+const alphabet = {
+    a: ".-",
+    b: "-...",
+    c: "-.-.",
+    d: "-..",
+    e: ".",
+    f: "..-.",
+    g: "--.",
+    h: "....",
+    i: "..",
+    j: ".---",
+    k: "-.-",
+    l: ".-..",
+    m: "--",
+    n: "-.",
+    o: "---",
+    p: ".--.",
+    q: "--.-",
+    r: ".-.",
+    s: "...",
+    t: "-",
+    u: "..-",
+    v: "...-",
+    w: ".--",
+    x: "-..-",
+    y: "-.--",
+    z: "--..",
+    " ": " ",
+    "1": ".----",
+    "2": "..---",
+    "3": "...--",
+    "4": "....-",
+    "5": ".....",
+    "6": "-....",
+    "7": "--...",
+    "8": "---..",
+    "9": "----.",
+    "0": "-----"
+  };
+  
+  const translate = () => {
+    const input = document.getElementById("input");
+    const inputValue = input.value;
+    // "Matt"
+    const output = document.getElementById("output");
+  
+    const characters = inputValue.toLowerCase().split("");
+    // characters = ["m", "a", "t", "t"]
+    const morseCharacters = characters.map(char => alphabet[char]);
+    // ["--", "..-"]
+    const morseString = morseCharacters.join(" ");
+    // "-- ..-"
+  
+    output.innerHTML = morseString;
+  };
+  
+  document.getElementById("translate").addEventListener("click", translate);
 
-const displayText = () => document.getElementById("translate").value.split("");
+// const compareTextToArray = (morseCode, displayText) => {
 
-const compareTextToArray = (morseCode, displayText) => {
-
-    const displayTextLoop = displayText.map();
-    document.getElementById.innerHTML(compareLoop);
+//     const displayTextLoop = displayText.map();
+//     document.getElementById("p").innerHTML(morseLoop);
     
 
-}
+// }
 
-const morseLoop = (result) => { \
-    return morseCode.char.includes(result);
-}
+// const morseLoop = (result) => { 
+//     return morseCode.char.includes(result);
+// }
 
 
-compareTextToArray(morseCode, displayText);
+// compareTextToArray(morseCode, displayText);
 
 
 
