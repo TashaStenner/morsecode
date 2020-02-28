@@ -14,6 +14,8 @@ log to output -- done
 
 log individaul letters -- done
 
+//scrap//
+
 morse character includes the 1st value of the display text string? If so return the [1] value of morseCode character
 
 compare one letter to the data
@@ -24,6 +26,8 @@ array1[0] === array2[0] then get object property in array 1. if not index ++ on 
 log result 
 
 compare 
+
+//scrap//
 
 
 notes: 

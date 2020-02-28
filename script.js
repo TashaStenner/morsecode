@@ -38,79 +38,80 @@ const alphabet = {
     "0": "-----"
   };
   
+    const morseAlphabet = {
+      ".-":"a",
+      "-...":"b",
+      "-.-.":"c",
+      "-..":"d",
+      ".":"e",
+      "..-.":"f",
+      "--.":"g",
+      "....":"h",
+      "..":"i",
+      ".---":"j",
+      "-.-":"k",
+      ".-..":"l",
+      "--":"m",
+      "-.":"n",
+      "---": "o",
+      ".--.":"p",
+      "--.-":"q",
+      ".-.":"r",
+      "...":"s",
+      "-": "t",
+      "..-": "u",
+      "...-": "v",
+      ".--": "w",
+      "-..-":"x",
+      "-.--":"y",
+      "--..":"z",
+      " ": " ",
+      ".----":"1",
+      "..---":"2",
+      "...--":"3",
+      "....-":"4",
+      ".....":"5",
+      "-....":"6",
+      "--...":"7",
+      "---..":"8",
+      "----.":"9",
+      "-----":"0",
+    };
+  
   const translateEnglishToMorseCode = () => {
-    const input = document.getElementById("englishInput");
-    const inputValue = input.value;
-    // "Matt"
+    const inputValue = input().value;
+    
     const output = document.getElementById("morseOutput");
   
     const characters = inputValue.toLowerCase().split("");
-    // characters = ["m", "a", "t", "t"]
+ 
     const morseCharacters = characters.map(char => alphabet[char]);
-    // ["--", "..-"]
+    
     const morseString = morseCharacters.join(" ");
-    // "-- ..-"
-  
+    
     output.innerHTML = morseString;
   };
   
+  const input = () =>  document.getElementById("englishInput");
+  
+  
   document.getElementById("translateEnglishToMorse").addEventListener("click", translateEnglishToMorseCode);
 
-  const morseAlphabet = {
-    ".-":"a",
-    "-...":"b",
-    "-.-.":"c",
-    "-..":"d",
-    ".":"e",
-    "..-.":"f",
-    "--.":"g",
-    "....":"h",
-    "..":"i",
-    ".---":"j",
-    "-.-":"k",
-    ".-..":"l",
-    "--":"m",
-    "-.":"n",
-    "---": "o",
-    ".--.":"p",
-    "--.-":"q",
-    ".-.":"r",
-    "...":"s",
-    "-": "t",
-    "..-": "u",
-    "...-": "v",
-    ".--": "w",
-    "-..-":"x",
-    "-.--":"y",
-    "--..":"z",
-    " ": " ",
-    ".----":"1",
-    "..---":"2",
-    "...--":"3",
-    "....-":"4",
-    ".....":"5",
-    "-....":"6",
-    "--...":"7",
-    "---..":"8",
-    "----.":"9",
-    "-----":"0",
-  };
-
   const translateMorseToEnglish = () => {
-    const MorseInput = document.getElementById("morseInput");
     const morseInputValue = MorseInput.value;
-    // "Matt"
+    
     const englishOutput = document.getElementById("enOutput");
-  
+    
     const morseCharacters = morseInputValue.split(" ");
-    // characters = ["m", "a", "t", "t"]
+    
     const englishCharacters = morseCharacters.map(char => morseAlphabet[char]);
-    // ["--", "..-"]
+    
     const englishString = englishCharacters.join("");
-    // "-- ..-"
-  
+    
     englishOutput.innerHTML = englishString;
   };
+
+  const MorseInput = () => document.getElementById("morseInput");
   
   document.getElementById("translateMorseCodeToEnglish").addEventListener("click", translateMorseToEnglish);
 

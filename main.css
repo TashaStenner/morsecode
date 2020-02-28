@@ -6,8 +6,19 @@
 }
 
 section {
-  height: 80vh;
-  width: 30vw;
-  margin: 10vh auto;
+  height: 90vh;
+  width: 90vw;
+}
+
+section h1 {
+  text-align: center;
+}
+
+@media screen and (min-width: 721px) {
+  section {
+    height: 80vh;
+    width: 40vw;
+    margin: 10vh auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
