@@ -98,7 +98,7 @@ const alphabet = {
   document.getElementById("translateEnglishToMorse").addEventListener("click", translateEnglishToMorseCode);
 
   const translateMorseToEnglish = () => {
-    const morseInputValue = MorseInput.value;
+    const morseInputValue = MorseInput().value;
     
     const englishOutput = document.getElementById("enOutput");
     
