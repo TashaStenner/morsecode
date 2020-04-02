@@ -3,7 +3,7 @@ A challenge set by our coaches at Nology to demonstrate being able to use arrays
 I used bootstrap to style this project.
 
 ## Tech  Stack 
-* Javascriipt
+* Javascript
 * HTML
 * Bootstrap
 
